@@ -1,0 +1,54 @@
+ion-header {
+  background-color: #2e7d32; 
+  color: white;
+}
+
+ion-toolbar {
+  --background: #e53935;
+  --color: white;
+}
+
+ion-title{
+  text-align: center;
+  font-size: 36px;
+  padding: 15px;
+}
+
+ion-content {
+  --background: #f1f8f4; 
+}
+
+iion-item {
+  --background: #2e7d32;
+  --color: white;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding-inline: 8px;
+  font-size: 14px;
+}
+
+ion-label {
+  color: white;
+  font-size: 14px;
+}
+
+ion-input,
+ion-select {
+  color: black;
+  font-size: 14px;
+}
+
+ion-select::part(text) {
+  color: black;
+}
+
+ion-button {
+  --background: #e53935;
+  --color: white;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+
+
+

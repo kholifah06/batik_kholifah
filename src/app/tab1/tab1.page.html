@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title size="large">Batik Kholifah</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" className="soft-green-bg">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing..."
+    >
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-content>
+    <div class="card-grid">
+      <app-explore-container
+        *ngFor="let produk of products"
+        [jenis]="produk.jenis"
+        [harga]="produk.harga"
+        [stok]="produk.stok"
+        [warna]="produk.warna"
+        [bahan]="produk.bahan"
+        [kategori]="produk.kategori"
+        [ukuran]="produk.ukuran"
+        (cardClicked)="goToTab2(produk)"
+      ></app-explore-container>
+    </div>
+  </ion-content>
+</ion-content>

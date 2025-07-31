@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon
+        [name]="isEdit ? 'create-outline' : 'add-circle-outline'"
+        slot="start"
+        style="margin-right: 8px"
+      ></ion-icon>
+      {{ isEdit ? 'Ubah Produk' : 'Tambah Produk' }}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form (ngSubmit)="submitForm()" style="max-width: 500px; margin: 0 auto">
+    <ion-item>
+      <ion-label position="floating">Jenis</ion-label>
+      <ion-input
+        [(ngModel)]="form.jenis"
+        name="jenis"
+        required
+        type="text"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Harga</ion-label>
+      <ion-input
+        [(ngModel)]="form.harga"
+        name="harga"
+        required
+        type="number"
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Stok</ion-label>
+      <ion-input [(ngModel)]="form.stok" name="stok"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Warna</ion-label>
+      <ion-input [(ngModel)]="form.warna" name="warna"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Bahan</ion-label>
+      <ion-input [(ngModel)]="form.bahan" name="bahan"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Kategori</ion-label>
+      <ion-input [(ngModel)]="form.kategori" name="qty"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Ukuran</ion-label>
+      <ion-select [(ngModel)]="form.ukuran" name="ukuran" required>
+        <ion-select-option value="s">S</ion-select-option>
+        <ion-select-option value="m">M</ion-select-option>
+        <ion-select-option value="l">L</ion-select-option>
+        <ion-select-option value="xl">XL</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">
+      {{ isEdit ? 'Update Produk' : 'Simpan Produk' }}
+    </ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "Aplikasi_Puhri_Frozen",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,71 @@
+ion-card {
+  height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  padding-bottom: 24px; 
+}
+
+
+@media (min-width: 768px) {
+  .card-grid {
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-grid {
+    padding-bottom: 64px;
+  }
+}
+
+
+ion-card {
+  background-color: whitesmoke;
+  color: #2e7d32;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+ion-card-title {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: black;
+}
+
+ion-card-subtitle, ion-card-content {
+  font-size: 1.1rem;
+  color: black;
+}
+
+.soft-green-bg {
+  --background: #2e7d32;
+}
+
+ion-card-subtitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.status-out {
+  color: #f44336; 
+}
+
+.status-restock {
+  color: #ff9800; 
+}
+
+.status-available {
+  color: #2e7d32; 
+}
+
+
+
